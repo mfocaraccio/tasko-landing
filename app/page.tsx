@@ -142,203 +142,219 @@ function TaskoLogo({ size = 28 }: { size?: number }) {
   );
 }
 
-function HeroVisual() {
+function HeroVisual({ lang }: { lang: "en" | "es" }) {
+  const days = lang === "es"
+    ? ["LUN", "MAR", "MIÉ", "JUE", "VIE"]
+    : ["MON", "TUE", "WED", "THU", "FRI"];
+
+  const dragText = lang === "es"
+    ? "Arrastrá tareas entre días"
+    : "Drag tasks between days";
+
   return (
-    <div style={{ position: "relative", width: "100%", maxWidth: "500px", margin: "0 auto" }}>
+    <div style={{ position: "relative", width: "100%", maxWidth: "520px", margin: "0 auto" }}>
       {/* Glow effect */}
       <div style={{
         position: "absolute",
         top: "50%",
         left: "50%",
         transform: "translate(-50%, -50%)",
-        width: "300px",
-        height: "300px",
-        background: "radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%)",
+        width: "350px",
+        height: "350px",
+        background: "radial-gradient(circle, rgba(59,130,246,0.12) 0%, transparent 70%)",
         borderRadius: "50%",
         filter: "blur(40px)",
       }} />
 
-      {/* Main card */}
+      {/* Main weekly view card */}
       <div style={{
         position: "relative",
         background: "linear-gradient(135deg, #111 0%, #1a1a1a 100%)",
-        borderRadius: "24px",
-        padding: "32px",
+        borderRadius: "20px",
+        padding: "20px",
         border: "1px solid rgba(255,255,255,0.1)",
         boxShadow: "0 25px 50px -12px rgba(0,0,0,0.5)",
       }}>
-        {/* Task list preview */}
-        <div style={{ marginBottom: "20px" }}>
-          <div style={{
-            fontSize: "12px",
-            color: "#666",
-            textTransform: "uppercase",
-            letterSpacing: "1px",
-            marginBottom: "16px"
-          }}>
-            Today
-          </div>
-
-          {/* Completed task */}
-          <div style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "12px",
-            padding: "12px 16px",
-            background: "rgba(255,255,255,0.03)",
-            borderRadius: "12px",
-            marginBottom: "8px",
-          }}>
-            <div style={{
-              width: "20px",
-              height: "20px",
-              borderRadius: "50%",
-              background: "rgba(34,197,94,0.2)",
-              border: "2px solid #22c55e",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
+        {/* Week header */}
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(5, 1fr)",
+          gap: "8px",
+          marginBottom: "12px",
+        }}>
+          {days.map((day, index) => (
+            <div key={day} style={{
+              textAlign: "center",
+              padding: "8px 4px",
+              borderRadius: "8px",
+              background: index === 1 ? "rgba(59,130,246,0.15)" : "transparent",
             }}>
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#22c55e" strokeWidth="3">
-                <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <div style={{
+                fontSize: "11px",
+                fontWeight: 600,
+                color: index === 1 ? "#60a5fa" : "#666",
+                letterSpacing: "0.5px",
+              }}>
+                {day}
+              </div>
+              <div style={{
+                fontSize: "18px",
+                fontWeight: 600,
+                color: index === 1 ? "#fff" : "#888",
+                marginTop: "2px",
+              }}>
+                {23 + index}
+              </div>
             </div>
-            <span style={{ color: "#666", textDecoration: "line-through", fontSize: "14px" }}>
-              Review project proposal
-            </span>
-            <span style={{
-              marginLeft: "auto",
-              padding: "4px 8px",
-              background: "rgba(59,130,246,0.15)",
-              color: "#60a5fa",
-              fontSize: "11px",
-              borderRadius: "6px",
-              fontWeight: 500,
-            }}>Work</span>
-          </div>
-
-          {/* Active task */}
-          <div style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "12px",
-            padding: "12px 16px",
-            background: "rgba(59,130,246,0.05)",
-            borderRadius: "12px",
-            marginBottom: "8px",
-            border: "1px solid rgba(59,130,246,0.2)",
-          }}>
-            <div style={{
-              width: "20px",
-              height: "20px",
-              borderRadius: "50%",
-              border: "2px solid #3b82f6",
-            }} />
-            <span style={{ color: "#fff", fontSize: "14px" }}>
-              Prepare presentation
-            </span>
-            <span style={{
-              marginLeft: "auto",
-              padding: "4px 8px",
-              background: "rgba(168,85,247,0.15)",
-              color: "#a855f7",
-              fontSize: "11px",
-              borderRadius: "6px",
-              fontWeight: 500,
-            }}>Priority</span>
-          </div>
-
-          {/* Another task */}
-          <div style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "12px",
-            padding: "12px 16px",
-            background: "rgba(255,255,255,0.03)",
-            borderRadius: "12px",
-          }}>
-            <div style={{
-              width: "20px",
-              height: "20px",
-              borderRadius: "50%",
-              border: "2px solid #444",
-            }} />
-            <span style={{ color: "#999", fontSize: "14px" }}>
-              Call with team
-            </span>
-            <span style={{ marginLeft: "auto", color: "#666", fontSize: "12px" }}>
-              3:00 PM
-            </span>
-          </div>
+          ))}
         </div>
 
-        {/* Add task input */}
+        {/* Tasks grid */}
         <div style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "12px",
-          padding: "12px 16px",
-          background: "rgba(255,255,255,0.02)",
-          borderRadius: "12px",
-          border: "1px dashed rgba(255,255,255,0.1)",
+          display: "grid",
+          gridTemplateColumns: "repeat(5, 1fr)",
+          gap: "8px",
+          minHeight: "180px",
         }}>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#444" strokeWidth="2">
-            <line x1="12" y1="5" x2="12" y2="19"/>
-            <line x1="5" y1="12" x2="19" y2="12"/>
-          </svg>
-          <span style={{ color: "#444", fontSize: "14px" }}>Add a task...</span>
+          {/* Monday */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+            <div style={{
+              padding: "8px",
+              background: "rgba(34,197,94,0.1)",
+              borderRadius: "8px",
+              borderLeft: "3px solid #22c55e",
+            }}>
+              <div style={{ fontSize: "11px", color: "#888", textDecoration: "line-through" }}>Emails</div>
+            </div>
+          </div>
+
+          {/* Tuesday - active day */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+            <div style={{
+              padding: "8px",
+              background: "rgba(59,130,246,0.15)",
+              borderRadius: "8px",
+              borderLeft: "3px solid #3b82f6",
+            }}>
+              <div style={{ fontSize: "11px", color: "#fff" }}>Design review</div>
+            </div>
+            <div style={{
+              padding: "8px",
+              background: "rgba(168,85,247,0.1)",
+              borderRadius: "8px",
+              borderLeft: "3px solid #a855f7",
+            }}>
+              <div style={{ fontSize: "11px", color: "#c4b5fd" }}>Team call</div>
+            </div>
+          </div>
+
+          {/* Wednesday */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+            <div style={{
+              padding: "8px",
+              background: "rgba(251,191,36,0.1)",
+              borderRadius: "8px",
+              borderLeft: "3px solid #fbbf24",
+            }}>
+              <div style={{ fontSize: "11px", color: "#fcd34d" }}>Report</div>
+            </div>
+          </div>
+
+          {/* Thursday - drop zone highlight */}
+          <div style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "6px",
+            position: "relative",
+          }}>
+            {/* Drop zone indicator */}
+            <div style={{
+              padding: "8px",
+              background: "rgba(59,130,246,0.05)",
+              borderRadius: "8px",
+              border: "2px dashed rgba(59,130,246,0.3)",
+              minHeight: "36px",
+            }} />
+          </div>
+
+          {/* Friday */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+            <div style={{
+              padding: "8px",
+              background: "rgba(236,72,153,0.1)",
+              borderRadius: "8px",
+              borderLeft: "3px solid #ec4899",
+            }}>
+              <div style={{ fontSize: "11px", color: "#f472b6" }}>Launch</div>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Floating elements */}
+      {/* Floating drag indicator */}
       <div style={{
         position: "absolute",
-        top: "-20px",
-        right: "-20px",
-        width: "60px",
-        height: "60px",
-        background: "linear-gradient(135deg, #3b82f6, #2563eb)",
-        borderRadius: "16px",
+        top: "45%",
+        right: "-25px",
+        transform: "translateY(-50%)",
         display: "flex",
+        flexDirection: "column",
         alignItems: "center",
-        justifyContent: "center",
-        boxShadow: "0 10px 30px rgba(59,130,246,0.3)",
+        gap: "8px",
       }}>
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-          <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round"/>
+        {/* Dragging task card */}
+        <div style={{
+          padding: "10px 14px",
+          background: "linear-gradient(135deg, #3b82f6, #2563eb)",
+          borderRadius: "10px",
+          boxShadow: "0 10px 30px rgba(59,130,246,0.4), 0 0 0 2px rgba(255,255,255,0.1)",
+          transform: "rotate(3deg)",
+        }}>
+          <div style={{ fontSize: "12px", color: "#fff", fontWeight: 500 }}>Presentation</div>
+        </div>
+
+        {/* Curved arrow */}
+        <svg width="60" height="40" viewBox="0 0 60 40" fill="none" style={{ marginLeft: "-20px" }}>
+          <path
+            d="M50 5 C 30 5, 20 20, 10 35"
+            stroke="rgba(59,130,246,0.5)"
+            strokeWidth="2"
+            strokeDasharray="4 4"
+            fill="none"
+            strokeLinecap="round"
+          />
+          <path
+            d="M15 30 L10 35 L5 28"
+            stroke="rgba(59,130,246,0.5)"
+            strokeWidth="2"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       </div>
 
+      {/* Drag hint badge */}
       <div style={{
         position: "absolute",
-        bottom: "40px",
-        left: "-30px",
-        padding: "12px 16px",
+        bottom: "-15px",
+        left: "50%",
+        transform: "translateX(-50%)",
+        padding: "8px 16px",
         background: "#1a1a1a",
-        borderRadius: "12px",
+        borderRadius: "20px",
         border: "1px solid rgba(255,255,255,0.1)",
         boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
         display: "flex",
         alignItems: "center",
         gap: "8px",
+        whiteSpace: "nowrap",
       }}>
-        <div style={{
-          width: "32px",
-          height: "32px",
-          background: "rgba(34,197,94,0.15)",
-          borderRadius: "8px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" strokeWidth="2">
-            <polyline points="20 6 9 17 4 12"/>
-          </svg>
-        </div>
-        <div>
-          <div style={{ fontSize: "12px", color: "#22c55e", fontWeight: 600 }}>12 tasks</div>
-          <div style={{ fontSize: "10px", color: "#666" }}>completed today</div>
-        </div>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" strokeWidth="2">
+          <path d="M5 9l4 4-4 4" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M12 9l4 4-4 4" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+        <span style={{ fontSize: "12px", color: "#888" }}>{dragText}</span>
       </div>
     </div>
   );
@@ -557,7 +573,7 @@ export default function Home() {
 
           {/* Right: Visual */}
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <HeroVisual />
+            <HeroVisual lang={lang} />
           </div>
         </div>
       </section>
