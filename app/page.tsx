@@ -9,78 +9,54 @@ const translations = {
       getStarted: "Get Started Free",
     },
     hero: {
-      title: "Your tasks.",
-      titleHighlight: "Simplified.",
-      subtitle: "Stop juggling between apps. Tasko brings all your tasks, projects, and goals into one clean, simple interface.",
+      title: "Your tasks,",
+      titleHighlight: "simplified.",
+      subtitle: "The task manager that helps you focus on what matters. Organize projects, plan your week, and get things done.",
       cta: "Get Started Free",
       noCreditCard: "No credit card required",
     },
-    stats: {
-      tasks: "Tasks completed",
-      users: "Happy users",
-      rating: "App rating",
-    },
     features: {
-      title: "Everything in one place",
-      subtitle: "Simple tools that work together to keep you organized",
+      title: "Everything you need",
+      subtitle: "Simple tools to keep you organized",
       list: [
         {
           title: "Quick Capture",
-          description: "Add tasks in seconds. Just type and go. No complicated forms or endless options.",
+          description: "Add tasks in seconds. Just type and go.",
           icon: "plus",
         },
         {
-          title: "Projects & Lists",
-          description: "Group related tasks into projects. Track progress with visual indicators.",
+          title: "Projects",
+          description: "Group tasks into projects. Track progress easily.",
           icon: "folder",
         },
         {
-          title: "Plan Your Week",
-          description: "See your entire week at a glance. Drag tasks between days to plan ahead.",
+          title: "Weekly View",
+          description: "See your entire week at a glance.",
           icon: "calendar",
         },
         {
-          title: "Labels & Filters",
-          description: "Organize with custom labels and colors. Find anything instantly.",
+          title: "Labels",
+          description: "Organize with colors and categories.",
           icon: "tag",
         },
         {
-          title: "Recurring Tasks",
-          description: "Set it once, forget it. Daily habits, weekly reviews, monthly goals.",
+          title: "Recurring",
+          description: "Set tasks that repeat automatically.",
           icon: "repeat",
         },
         {
-          title: "Works Everywhere",
-          description: "Access from any device. Your tasks sync instantly across all platforms.",
-          icon: "devices",
-        },
-      ],
-    },
-    benefits: {
-      title: "Why Tasko?",
-      list: [
-        {
-          title: "Simple by design",
-          description: "No learning curve. Start being productive in minutes, not hours.",
-        },
-        {
-          title: "Fast and focused",
-          description: "A clean interface that helps you focus on what matters.",
-        },
-        {
-          title: "Free to start",
-          description: "Everything you need to get organized. No hidden costs.",
+          title: "Sync",
+          description: "Access from any device, anywhere.",
+          icon: "sync",
         },
       ],
     },
     cta: {
-      title: "Ready to get organized?",
-      subtitle: "Join thousands who simplified their productivity with Tasko.",
-      button: "Start Free Today",
-      note: "Free forever. No credit card needed.",
+      title: "Start organizing today",
+      subtitle: "Free forever. No credit card needed.",
+      button: "Create Free Account",
     },
     footer: {
-      tagline: "Simple task management",
       copyright: "All rights reserved.",
     },
   },
@@ -90,78 +66,54 @@ const translations = {
       getStarted: "Comenzar Gratis",
     },
     hero: {
-      title: "Tus tareas.",
-      titleHighlight: "Simplificadas.",
-      subtitle: "Deja de saltar entre apps. Tasko une todas tus tareas, proyectos y metas en una interfaz limpia y simple.",
+      title: "Tus tareas,",
+      titleHighlight: "simplificadas.",
+      subtitle: "El gestor de tareas que te ayuda a enfocarte en lo importante. Organiza proyectos, planifica tu semana y logra tus metas.",
       cta: "Comenzar Gratis",
       noCreditCard: "Sin tarjeta de credito",
     },
-    stats: {
-      tasks: "Tareas completadas",
-      users: "Usuarios felices",
-      rating: "Valoracion",
-    },
     features: {
-      title: "Todo en un solo lugar",
-      subtitle: "Herramientas simples que trabajan juntas para mantenerte organizado",
+      title: "Todo lo que necesitas",
+      subtitle: "Herramientas simples para mantenerte organizado",
       list: [
         {
           title: "Captura Rapida",
-          description: "Agrega tareas en segundos. Solo escribe y listo. Sin formularios complicados.",
+          description: "Agrega tareas en segundos. Escribe y listo.",
           icon: "plus",
         },
         {
-          title: "Proyectos y Listas",
-          description: "Agrupa tareas relacionadas en proyectos. Sigue el progreso visualmente.",
+          title: "Proyectos",
+          description: "Agrupa tareas en proyectos. Sigue el progreso.",
           icon: "folder",
         },
         {
-          title: "Planifica tu Semana",
-          description: "Ve toda tu semana de un vistazo. Arrastra tareas entre dias para planificar.",
+          title: "Vista Semanal",
+          description: "Ve toda tu semana de un vistazo.",
           icon: "calendar",
         },
         {
-          title: "Etiquetas y Filtros",
-          description: "Organiza con etiquetas y colores personalizados. Encuentra todo al instante.",
+          title: "Etiquetas",
+          description: "Organiza con colores y categorias.",
           icon: "tag",
         },
         {
-          title: "Tareas Recurrentes",
-          description: "Configuralo una vez y olvidate. Habitos diarios, revisiones semanales, metas mensuales.",
+          title: "Recurrentes",
+          description: "Tareas que se repiten automaticamente.",
           icon: "repeat",
         },
         {
-          title: "Funciona en Todos Lados",
-          description: "Accede desde cualquier dispositivo. Tus tareas se sincronizan al instante.",
-          icon: "devices",
-        },
-      ],
-    },
-    benefits: {
-      title: "Por que Tasko?",
-      list: [
-        {
-          title: "Simple por diseno",
-          description: "Sin curva de aprendizaje. Se productivo en minutos, no en horas.",
-        },
-        {
-          title: "Rapido y enfocado",
-          description: "Una interfaz limpia que te ayuda a enfocarte en lo importante.",
-        },
-        {
-          title: "Gratis para empezar",
-          description: "Todo lo que necesitas para organizarte. Sin costos ocultos.",
+          title: "Sincronizacion",
+          description: "Accede desde cualquier dispositivo.",
+          icon: "sync",
         },
       ],
     },
     cta: {
-      title: "Listo para organizarte?",
-      subtitle: "Unite a miles que simplificaron su productividad con Tasko.",
-      button: "Empezar Gratis Hoy",
-      note: "Gratis para siempre. Sin tarjeta de credito.",
+      title: "Empieza a organizarte hoy",
+      subtitle: "Gratis para siempre. Sin tarjeta de credito.",
+      button: "Crear Cuenta Gratis",
     },
     footer: {
-      tagline: "Gestion de tareas simple",
       copyright: "Todos los derechos reservados.",
     },
   },
@@ -169,19 +121,19 @@ const translations = {
 
 const APP_URL = "https://simpletodo-six-sigma.vercel.app";
 
-function TaskoLogo({ className = "w-8 h-8" }: { className?: string }) {
+function TaskoLogo({ size = 28 }: { size?: number }) {
   return (
-    <svg className={className} viewBox="0 0 60 60" fill="none">
+    <svg width={size} height={size} viewBox="0 0 60 60" fill="none">
       <path
         d="M12 8 L6 8 L6 52 L12 52"
-        stroke="currentColor"
+        stroke="white"
         strokeWidth="5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M22 33 L30 41 L54 15"
-        stroke="currentColor"
+        stroke="white"
         strokeWidth="5"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -190,45 +142,48 @@ function TaskoLogo({ className = "w-8 h-8" }: { className?: string }) {
   );
 }
 
-function FeatureIcon({ icon }: { icon: string }) {
+function Icon({ name }: { name: string }) {
   const icons: Record<string, React.ReactNode> = {
     plus: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+      <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="12" y1="5" x2="12" y2="19"></line>
+        <line x1="5" y1="12" x2="19" y2="12"></line>
       </svg>
     ),
     folder: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+      <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
       </svg>
     ),
     calendar: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+      <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
       </svg>
     ),
     tag: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+      <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+        <line x1="7" y1="7" x2="7.01" y2="7"></line>
       </svg>
     ),
     repeat: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+      <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="17 1 21 5 17 9"></polyline>
+        <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+        <polyline points="7 23 3 19 7 15"></polyline>
+        <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
       </svg>
     ),
-    devices: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-      </svg>
-    ),
-    check: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+    sync: (
+      <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 12a9 9 0 0 1-9 9m9-9a9 9 0 0 0-9-9m9 9H3m9 9a9 9 0 0 1-9-9m9 9c1.66 0 3-4.03 3-9s-1.34-9-3-9m0 18c-1.66 0-3-4.03-3-9s1.34-9 3-9m-9 9a9 9 0 0 1 9-9"></path>
       </svg>
     ),
   };
-  return icons[icon] || null;
+  return <>{icons[name]}</>;
 }
 
 export default function Home() {
@@ -236,35 +191,66 @@ export default function Home() {
   const t = translations[lang];
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white">
+    <div style={{ minHeight: "100vh", background: "#0a0a0a", color: "white" }}>
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-xl border-b border-white/5">
-        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <TaskoLogo className="w-7 h-7" />
-            <span className="font-medium text-lg">tasko</span>
+      <nav style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 50,
+        background: "rgba(10,10,10,0.9)",
+        backdropFilter: "blur(10px)",
+        borderBottom: "1px solid rgba(255,255,255,0.05)"
+      }}>
+        <div style={{
+          maxWidth: "1200px",
+          margin: "0 auto",
+          padding: "0 24px",
+          height: "64px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between"
+        }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+            <TaskoLogo size={28} />
+            <span style={{ fontWeight: 500, fontSize: "18px" }}>tasko</span>
           </div>
 
-          <div className="flex items-center gap-4">
-            <a href="#features" className="text-sm text-gray-400 hover:text-white transition-colors hidden sm:block">
+          <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+            <a href="#features" style={{ fontSize: "14px", color: "#888", textDecoration: "none" }}>
               {t.nav.features}
             </a>
 
             {/* Language Toggle */}
-            <div className="flex items-center bg-white/5 rounded-full p-0.5">
+            <div style={{ display: "flex", background: "rgba(255,255,255,0.05)", borderRadius: "20px", padding: "2px" }}>
               <button
                 onClick={() => setLang("es")}
-                className={`px-2.5 py-1 text-xs font-medium rounded-full transition-all ${
-                  lang === "es" ? "bg-white text-black" : "text-gray-400 hover:text-white"
-                }`}
+                style={{
+                  padding: "6px 12px",
+                  fontSize: "12px",
+                  fontWeight: 500,
+                  borderRadius: "18px",
+                  border: "none",
+                  cursor: "pointer",
+                  background: lang === "es" ? "white" : "transparent",
+                  color: lang === "es" ? "black" : "#888",
+                }}
               >
                 ES
               </button>
               <button
                 onClick={() => setLang("en")}
-                className={`px-2.5 py-1 text-xs font-medium rounded-full transition-all ${
-                  lang === "en" ? "bg-white text-black" : "text-gray-400 hover:text-white"
-                }`}
+                style={{
+                  padding: "6px 12px",
+                  fontSize: "12px",
+                  fontWeight: 500,
+                  borderRadius: "18px",
+                  border: "none",
+                  cursor: "pointer",
+                  background: lang === "en" ? "white" : "transparent",
+                  color: lang === "en" ? "black" : "#888",
+                }}
               >
                 EN
               </button>
@@ -272,7 +258,15 @@ export default function Home() {
 
             <a
               href={`${APP_URL}/auth/signup`}
-              className="px-4 py-2 bg-white hover:bg-gray-100 text-black text-sm font-medium rounded-lg transition-all"
+              style={{
+                padding: "8px 16px",
+                background: "white",
+                color: "black",
+                fontSize: "14px",
+                fontWeight: 500,
+                borderRadius: "8px",
+                textDecoration: "none",
+              }}
             >
               {t.nav.getStarted}
             </a>
@@ -281,182 +275,102 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-24 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Title */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 tracking-tight">
+      <section style={{ paddingTop: "160px", paddingBottom: "120px", textAlign: "center" }}>
+        <div style={{ maxWidth: "800px", margin: "0 auto", padding: "0 24px" }}>
+          <h1 style={{
+            fontSize: "clamp(48px, 10vw, 80px)",
+            fontWeight: 700,
+            lineHeight: 1.1,
+            marginBottom: "24px",
+            letterSpacing: "-0.02em"
+          }}>
             {t.hero.title}
             <br />
-            <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
+            <span style={{
+              background: "linear-gradient(135deg, #60a5fa, #3b82f6)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text"
+            }}>
               {t.hero.titleHighlight}
             </span>
           </h1>
 
-          {/* Subtitle */}
-          <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+          <p style={{
+            fontSize: "20px",
+            color: "#888",
+            maxWidth: "600px",
+            margin: "0 auto 40px",
+            lineHeight: 1.6
+          }}>
             {t.hero.subtitle}
           </p>
 
-          {/* CTA */}
-          <div className="flex flex-col items-center gap-4">
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "16px" }}>
             <a
               href={`${APP_URL}/auth/signup`}
-              className="px-8 py-4 bg-white hover:bg-gray-100 text-black font-semibold rounded-xl transition-all text-lg shadow-lg shadow-white/10"
+              style={{
+                display: "inline-block",
+                padding: "16px 32px",
+                background: "white",
+                color: "black",
+                fontSize: "18px",
+                fontWeight: 600,
+                borderRadius: "12px",
+                textDecoration: "none",
+              }}
             >
               {t.hero.cta}
             </a>
-            <span className="text-sm text-gray-500">{t.hero.noCreditCard}</span>
-          </div>
-        </div>
-
-        {/* App Preview */}
-        <div className="max-w-5xl mx-auto mt-20">
-          <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-[#111]">
-            {/* Browser bar */}
-            <div className="flex items-center gap-2 px-4 py-3 bg-[#1a1a1a] border-b border-white/5">
-              <div className="flex gap-1.5">
-                <div className="w-3 h-3 rounded-full bg-[#ff5f57]"></div>
-                <div className="w-3 h-3 rounded-full bg-[#febc2e]"></div>
-                <div className="w-3 h-3 rounded-full bg-[#28c840]"></div>
-              </div>
-              <div className="flex-1 flex justify-center">
-                <div className="px-4 py-1.5 bg-[#0a0a0a] rounded-lg text-xs text-gray-500 flex items-center gap-2">
-                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                  </svg>
-                  app.tasko.com
-                </div>
-              </div>
-            </div>
-
-            {/* App Content Mockup */}
-            <div className="bg-[#0a0a0a] p-6 min-h-[400px]">
-              <div className="flex gap-6">
-                {/* Sidebar mockup */}
-                <div className="w-48 flex-shrink-0 hidden md:block">
-                  <div className="flex items-center gap-2 mb-6">
-                    <TaskoLogo className="w-6 h-6" />
-                    <span className="font-medium">tasko</span>
-                  </div>
-                  <div className="space-y-1">
-                    <div className="px-3 py-2 bg-blue-500/10 text-blue-400 rounded-lg text-sm flex items-center gap-2">
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                      </svg>
-                      {lang === "es" ? "Mi Semana" : "My Week"}
-                    </div>
-                    <div className="px-3 py-2 text-gray-500 rounded-lg text-sm flex items-center gap-2">
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                      </svg>
-                      {lang === "es" ? "Programadas" : "Scheduled"}
-                    </div>
-                    <div className="px-3 py-2 text-gray-500 rounded-lg text-sm flex items-center gap-2">
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                      </svg>
-                      {lang === "es" ? "Recurrentes" : "Recurring"}
-                    </div>
-                    <div className="border-t border-white/5 my-3"></div>
-                    <div className="px-3 py-2 text-gray-500 rounded-lg text-sm flex items-center gap-2">
-                      <span className="w-4 h-4 flex items-center justify-center">📱</span>
-                      App Mobile
-                    </div>
-                    <div className="px-3 py-2 text-gray-500 rounded-lg text-sm flex items-center gap-2">
-                      <span className="w-4 h-4 flex items-center justify-center">🏠</span>
-                      {lang === "es" ? "Casa" : "Home"}
-                    </div>
-                    <div className="px-3 py-2 text-gray-500 rounded-lg text-sm flex items-center gap-2">
-                      <span className="w-4 h-4 flex items-center justify-center">💼</span>
-                      {lang === "es" ? "Trabajo" : "Work"}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Main content mockup */}
-                <div className="flex-1">
-                  <div className="mb-6">
-                    <h2 className="text-xl font-semibold mb-1">{lang === "es" ? "Lunes" : "Monday"}</h2>
-                    <p className="text-sm text-gray-500">Dec 30, 2024</p>
-                  </div>
-
-                  <div className="space-y-2">
-                    {/* Completed task */}
-                    <div className="flex items-center gap-3 p-3 bg-white/5 rounded-lg">
-                      <div className="w-5 h-5 rounded-full bg-green-500/20 border-2 border-green-500 flex items-center justify-center">
-                        <svg className="w-3 h-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <span className="text-gray-500 line-through">{lang === "es" ? "Revisar emails" : "Check emails"}</span>
-                      <span className="ml-auto px-2 py-0.5 bg-blue-500/20 text-blue-400 text-xs rounded">Work</span>
-                    </div>
-
-                    {/* Active task */}
-                    <div className="flex items-center gap-3 p-3 bg-white/5 rounded-lg border border-white/10">
-                      <div className="w-5 h-5 rounded-full border-2 border-gray-500"></div>
-                      <span>{lang === "es" ? "Terminar presentacion" : "Finish presentation"}</span>
-                      <span className="ml-auto px-2 py-0.5 bg-purple-500/20 text-purple-400 text-xs rounded">{lang === "es" ? "Urgente" : "Urgent"}</span>
-                    </div>
-
-                    {/* Another task */}
-                    <div className="flex items-center gap-3 p-3 bg-white/5 rounded-lg">
-                      <div className="w-5 h-5 rounded-full border-2 border-gray-500"></div>
-                      <span>{lang === "es" ? "Llamar al cliente" : "Call client"}</span>
-                      <span className="ml-auto text-xs text-gray-500">2:00 PM</span>
-                    </div>
-
-                    {/* Add task */}
-                    <div className="flex items-center gap-3 p-3 text-gray-500 hover:text-gray-400 cursor-pointer">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                      </svg>
-                      <span className="text-sm">{lang === "es" ? "Agregar tarea..." : "Add task..."}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Tasko Section */}
-      <section className="py-20 px-6 border-t border-white/5">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {t.benefits.list.map((benefit, index) => (
-              <div key={index} className="text-center md:text-left">
-                <div className="w-10 h-10 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 mb-4 mx-auto md:mx-0">
-                  <FeatureIcon icon="check" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">{benefit.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{benefit.description}</p>
-              </div>
-            ))}
+            <span style={{ fontSize: "14px", color: "#666" }}>{t.hero.noCreditCard}</span>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-24 px-6 bg-[#080808]">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">{t.features.title}</h2>
-            <p className="text-gray-400 text-lg max-w-xl mx-auto">{t.features.subtitle}</p>
+      <section id="features" style={{ padding: "80px 24px", background: "#080808" }}>
+        <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: "64px" }}>
+            <h2 style={{ fontSize: "36px", fontWeight: 700, marginBottom: "16px" }}>
+              {t.features.title}
+            </h2>
+            <p style={{ fontSize: "18px", color: "#888" }}>{t.features.subtitle}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gap: "24px"
+          }}>
             {t.features.list.map((feature, index) => (
               <div
                 key={index}
-                className="p-6 bg-[#111] rounded-2xl border border-white/5 hover:border-white/10 transition-colors"
+                style={{
+                  padding: "32px",
+                  background: "#111",
+                  borderRadius: "16px",
+                  border: "1px solid rgba(255,255,255,0.05)",
+                }}
               >
-                <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center text-white mb-4">
-                  <FeatureIcon icon={feature.icon} />
+                <div style={{
+                  width: "48px",
+                  height: "48px",
+                  background: "rgba(59,130,246,0.1)",
+                  borderRadius: "12px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: "#3b82f6",
+                  marginBottom: "20px",
+                }}>
+                  <Icon name={feature.icon} />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{feature.description}</p>
+                <h3 style={{ fontSize: "18px", fontWeight: 600, marginBottom: "8px" }}>
+                  {feature.title}
+                </h3>
+                <p style={{ fontSize: "14px", color: "#888", lineHeight: 1.6 }}>
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
@@ -464,32 +378,52 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">{t.cta.title}</h2>
-          <p className="text-gray-400 text-lg mb-8">{t.cta.subtitle}</p>
+      <section style={{ padding: "100px 24px", textAlign: "center" }}>
+        <div style={{ maxWidth: "600px", margin: "0 auto" }}>
+          <h2 style={{ fontSize: "36px", fontWeight: 700, marginBottom: "16px" }}>
+            {t.cta.title}
+          </h2>
+          <p style={{ fontSize: "18px", color: "#888", marginBottom: "32px" }}>
+            {t.cta.subtitle}
+          </p>
           <a
             href={`${APP_URL}/auth/signup`}
-            className="inline-block px-8 py-4 bg-white hover:bg-gray-100 text-black font-semibold rounded-xl transition-all text-lg"
+            style={{
+              display: "inline-block",
+              padding: "16px 32px",
+              background: "white",
+              color: "black",
+              fontSize: "18px",
+              fontWeight: 600,
+              borderRadius: "12px",
+              textDecoration: "none",
+            }}
           >
             {t.cta.button}
           </a>
-          <p className="mt-4 text-sm text-gray-500">{t.cta.note}</p>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-6 border-t border-white/5">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-2">
-              <TaskoLogo className="w-5 h-5" />
-              <span className="text-sm text-gray-400">tasko - {t.footer.tagline}</span>
-            </div>
-            <p className="text-gray-500 text-sm">
-              © {new Date().getFullYear()} Tasko. {t.footer.copyright}
-            </p>
-          </div>
+      <footer style={{
+        padding: "32px 24px",
+        borderTop: "1px solid rgba(255,255,255,0.05)",
+        textAlign: "center"
+      }}>
+        <div style={{
+          maxWidth: "1200px",
+          margin: "0 auto",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "8px",
+          color: "#666",
+          fontSize: "14px"
+        }}>
+          <TaskoLogo size={20} />
+          <span>tasko</span>
+          <span>·</span>
+          <span>© {new Date().getFullYear()} {t.footer.copyright}</span>
         </div>
       </footer>
     </div>
