@@ -142,6 +142,208 @@ function TaskoLogo({ size = 28 }: { size?: number }) {
   );
 }
 
+function HeroVisual() {
+  return (
+    <div style={{ position: "relative", width: "100%", maxWidth: "500px", margin: "0 auto" }}>
+      {/* Glow effect */}
+      <div style={{
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        width: "300px",
+        height: "300px",
+        background: "radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%)",
+        borderRadius: "50%",
+        filter: "blur(40px)",
+      }} />
+
+      {/* Main card */}
+      <div style={{
+        position: "relative",
+        background: "linear-gradient(135deg, #111 0%, #1a1a1a 100%)",
+        borderRadius: "24px",
+        padding: "32px",
+        border: "1px solid rgba(255,255,255,0.1)",
+        boxShadow: "0 25px 50px -12px rgba(0,0,0,0.5)",
+      }}>
+        {/* Task list preview */}
+        <div style={{ marginBottom: "20px" }}>
+          <div style={{
+            fontSize: "12px",
+            color: "#666",
+            textTransform: "uppercase",
+            letterSpacing: "1px",
+            marginBottom: "16px"
+          }}>
+            Today
+          </div>
+
+          {/* Completed task */}
+          <div style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "12px",
+            padding: "12px 16px",
+            background: "rgba(255,255,255,0.03)",
+            borderRadius: "12px",
+            marginBottom: "8px",
+          }}>
+            <div style={{
+              width: "20px",
+              height: "20px",
+              borderRadius: "50%",
+              background: "rgba(34,197,94,0.2)",
+              border: "2px solid #22c55e",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#22c55e" strokeWidth="3">
+                <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+            <span style={{ color: "#666", textDecoration: "line-through", fontSize: "14px" }}>
+              Review project proposal
+            </span>
+            <span style={{
+              marginLeft: "auto",
+              padding: "4px 8px",
+              background: "rgba(59,130,246,0.15)",
+              color: "#60a5fa",
+              fontSize: "11px",
+              borderRadius: "6px",
+              fontWeight: 500,
+            }}>Work</span>
+          </div>
+
+          {/* Active task */}
+          <div style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "12px",
+            padding: "12px 16px",
+            background: "rgba(59,130,246,0.05)",
+            borderRadius: "12px",
+            marginBottom: "8px",
+            border: "1px solid rgba(59,130,246,0.2)",
+          }}>
+            <div style={{
+              width: "20px",
+              height: "20px",
+              borderRadius: "50%",
+              border: "2px solid #3b82f6",
+            }} />
+            <span style={{ color: "#fff", fontSize: "14px" }}>
+              Prepare presentation
+            </span>
+            <span style={{
+              marginLeft: "auto",
+              padding: "4px 8px",
+              background: "rgba(168,85,247,0.15)",
+              color: "#a855f7",
+              fontSize: "11px",
+              borderRadius: "6px",
+              fontWeight: 500,
+            }}>Priority</span>
+          </div>
+
+          {/* Another task */}
+          <div style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "12px",
+            padding: "12px 16px",
+            background: "rgba(255,255,255,0.03)",
+            borderRadius: "12px",
+          }}>
+            <div style={{
+              width: "20px",
+              height: "20px",
+              borderRadius: "50%",
+              border: "2px solid #444",
+            }} />
+            <span style={{ color: "#999", fontSize: "14px" }}>
+              Call with team
+            </span>
+            <span style={{ marginLeft: "auto", color: "#666", fontSize: "12px" }}>
+              3:00 PM
+            </span>
+          </div>
+        </div>
+
+        {/* Add task input */}
+        <div style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "12px",
+          padding: "12px 16px",
+          background: "rgba(255,255,255,0.02)",
+          borderRadius: "12px",
+          border: "1px dashed rgba(255,255,255,0.1)",
+        }}>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#444" strokeWidth="2">
+            <line x1="12" y1="5" x2="12" y2="19"/>
+            <line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+          <span style={{ color: "#444", fontSize: "14px" }}>Add a task...</span>
+        </div>
+      </div>
+
+      {/* Floating elements */}
+      <div style={{
+        position: "absolute",
+        top: "-20px",
+        right: "-20px",
+        width: "60px",
+        height: "60px",
+        background: "linear-gradient(135deg, #3b82f6, #2563eb)",
+        borderRadius: "16px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        boxShadow: "0 10px 30px rgba(59,130,246,0.3)",
+      }}>
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+          <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </div>
+
+      <div style={{
+        position: "absolute",
+        bottom: "40px",
+        left: "-30px",
+        padding: "12px 16px",
+        background: "#1a1a1a",
+        borderRadius: "12px",
+        border: "1px solid rgba(255,255,255,0.1)",
+        boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
+        display: "flex",
+        alignItems: "center",
+        gap: "8px",
+      }}>
+        <div style={{
+          width: "32px",
+          height: "32px",
+          background: "rgba(34,197,94,0.15)",
+          borderRadius: "8px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" strokeWidth="2">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <div>
+          <div style={{ fontSize: "12px", color: "#22c55e", fontWeight: 600 }}>12 tasks</div>
+          <div style={{ fontSize: "10px", color: "#666" }}>completed today</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function Icon({ name }: { name: string }) {
   const icons: Record<string, React.ReactNode> = {
     plus: (
@@ -191,7 +393,7 @@ export default function Home() {
   const t = translations[lang];
 
   return (
-    <div style={{ minHeight: "100vh", background: "#0a0a0a", color: "white" }}>
+    <div style={{ minHeight: "100vh", background: "#0a0a0a", color: "white", overflow: "hidden" }}>
       {/* Navigation */}
       <nav style={{
         position: "fixed",
@@ -275,54 +477,87 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section style={{ paddingTop: "160px", paddingBottom: "120px", textAlign: "center" }}>
-        <div style={{ maxWidth: "800px", margin: "0 auto", padding: "0 24px" }}>
-          <h1 style={{
-            fontSize: "clamp(48px, 10vw, 80px)",
-            fontWeight: 700,
-            lineHeight: 1.1,
-            marginBottom: "24px",
-            letterSpacing: "-0.02em"
-          }}>
-            {t.hero.title}
-            <br />
-            <span style={{
-              background: "linear-gradient(135deg, #60a5fa, #3b82f6)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text"
+      <section style={{
+        paddingTop: "120px",
+        paddingBottom: "80px",
+        position: "relative",
+      }}>
+        {/* Background gradient */}
+        <div style={{
+          position: "absolute",
+          top: 0,
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: "100%",
+          maxWidth: "1000px",
+          height: "600px",
+          background: "radial-gradient(ellipse at center top, rgba(59,130,246,0.08) 0%, transparent 60%)",
+          pointerEvents: "none",
+        }} />
+
+        <div style={{
+          maxWidth: "1200px",
+          margin: "0 auto",
+          padding: "0 24px",
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: "60px",
+          alignItems: "center",
+        }}>
+          {/* Left: Text */}
+          <div>
+            <h1 style={{
+              fontSize: "clamp(40px, 6vw, 64px)",
+              fontWeight: 700,
+              lineHeight: 1.1,
+              marginBottom: "24px",
+              letterSpacing: "-0.02em"
             }}>
-              {t.hero.titleHighlight}
-            </span>
-          </h1>
+              {t.hero.title}
+              <br />
+              <span style={{
+                background: "linear-gradient(135deg, #60a5fa, #3b82f6)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text"
+              }}>
+                {t.hero.titleHighlight}
+              </span>
+            </h1>
 
-          <p style={{
-            fontSize: "20px",
-            color: "#888",
-            maxWidth: "600px",
-            margin: "0 auto 40px",
-            lineHeight: 1.6
-          }}>
-            {t.hero.subtitle}
-          </p>
+            <p style={{
+              fontSize: "18px",
+              color: "#888",
+              marginBottom: "32px",
+              lineHeight: 1.6,
+              maxWidth: "450px",
+            }}>
+              {t.hero.subtitle}
+            </p>
 
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "16px" }}>
-            <a
-              href={`${APP_URL}/auth/signup`}
-              style={{
-                display: "inline-block",
-                padding: "16px 32px",
-                background: "white",
-                color: "black",
-                fontSize: "18px",
-                fontWeight: 600,
-                borderRadius: "12px",
-                textDecoration: "none",
-              }}
-            >
-              {t.hero.cta}
-            </a>
-            <span style={{ fontSize: "14px", color: "#666" }}>{t.hero.noCreditCard}</span>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "12px" }}>
+              <a
+                href={`${APP_URL}/auth/signup`}
+                style={{
+                  display: "inline-block",
+                  padding: "14px 28px",
+                  background: "white",
+                  color: "black",
+                  fontSize: "16px",
+                  fontWeight: 600,
+                  borderRadius: "10px",
+                  textDecoration: "none",
+                }}
+              >
+                {t.hero.cta}
+              </a>
+              <span style={{ fontSize: "13px", color: "#666" }}>{t.hero.noCreditCard}</span>
+            </div>
+          </div>
+
+          {/* Right: Visual */}
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <HeroVisual />
           </div>
         </div>
       </section>
@@ -340,35 +575,36 @@ export default function Home() {
           <div style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-            gap: "24px"
+            gap: "20px"
           }}>
             {t.features.list.map((feature, index) => (
               <div
                 key={index}
                 style={{
-                  padding: "32px",
-                  background: "#111",
+                  padding: "28px",
+                  background: "linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%)",
                   borderRadius: "16px",
-                  border: "1px solid rgba(255,255,255,0.05)",
+                  border: "1px solid rgba(255,255,255,0.06)",
+                  transition: "all 0.2s ease",
                 }}
               >
                 <div style={{
-                  width: "48px",
-                  height: "48px",
-                  background: "rgba(59,130,246,0.1)",
+                  width: "44px",
+                  height: "44px",
+                  background: "linear-gradient(135deg, rgba(59,130,246,0.15) 0%, rgba(59,130,246,0.05) 100%)",
                   borderRadius: "12px",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
                   color: "#3b82f6",
-                  marginBottom: "20px",
+                  marginBottom: "16px",
                 }}>
                   <Icon name={feature.icon} />
                 </div>
-                <h3 style={{ fontSize: "18px", fontWeight: 600, marginBottom: "8px" }}>
+                <h3 style={{ fontSize: "17px", fontWeight: 600, marginBottom: "8px" }}>
                   {feature.title}
                 </h3>
-                <p style={{ fontSize: "14px", color: "#888", lineHeight: 1.6 }}>
+                <p style={{ fontSize: "14px", color: "#777", lineHeight: 1.5 }}>
                   {feature.description}
                 </p>
               </div>
@@ -378,8 +614,24 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section style={{ padding: "100px 24px", textAlign: "center" }}>
-        <div style={{ maxWidth: "600px", margin: "0 auto" }}>
+      <section style={{
+        padding: "100px 24px",
+        textAlign: "center",
+        position: "relative",
+      }}>
+        {/* Background glow */}
+        <div style={{
+          position: "absolute",
+          bottom: 0,
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: "600px",
+          height: "300px",
+          background: "radial-gradient(ellipse at center bottom, rgba(59,130,246,0.08) 0%, transparent 70%)",
+          pointerEvents: "none",
+        }} />
+
+        <div style={{ maxWidth: "600px", margin: "0 auto", position: "relative" }}>
           <h2 style={{ fontSize: "36px", fontWeight: 700, marginBottom: "16px" }}>
             {t.cta.title}
           </h2>
@@ -426,6 +678,18 @@ export default function Home() {
           <span>© {new Date().getFullYear()} {t.footer.copyright}</span>
         </div>
       </footer>
+
+      {/* Mobile styles */}
+      <style>{`
+        @media (max-width: 900px) {
+          section > div {
+            grid-template-columns: 1fr !important;
+          }
+          section > div > div:last-child {
+            display: none !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }
