@@ -144,179 +144,235 @@ function TaskoLogo({ size = 28 }: { size?: number }) {
 
 function HeroVisual({ lang }: { lang: "en" | "es" }) {
   const days = lang === "es"
-    ? ["LUN", "MAR", "MIÉ", "JUE", "VIE"]
-    : ["MON", "TUE", "WED", "THU", "FRI"];
+    ? [
+        { short: "LUN", num: "23" },
+        { short: "MAR", num: "24" },
+        { short: "MIÉ", num: "25" },
+        { short: "JUE", num: "26" },
+        { short: "VIE", num: "27" },
+      ]
+    : [
+        { short: "MON", num: "23" },
+        { short: "TUE", num: "24" },
+        { short: "WED", num: "25" },
+        { short: "THU", num: "26" },
+        { short: "FRI", num: "27" },
+      ];
 
   const dragText = lang === "es"
     ? "Arrastrá tareas entre días"
     : "Drag tasks between days";
 
   return (
-    <div style={{ position: "relative", width: "100%", maxWidth: "520px", margin: "0 auto" }}>
+    <div style={{ position: "relative", width: "100%", maxWidth: "400px", margin: "0 auto" }}>
       {/* Glow effect */}
       <div style={{
         position: "absolute",
         top: "50%",
         left: "50%",
         transform: "translate(-50%, -50%)",
-        width: "350px",
-        height: "350px",
+        width: "300px",
+        height: "300px",
         background: "radial-gradient(circle, rgba(59,130,246,0.12) 0%, transparent 70%)",
         borderRadius: "50%",
         filter: "blur(40px)",
       }} />
 
-      {/* Main weekly view card */}
+      {/* Main weekly view card - VERTICAL */}
       <div style={{
         position: "relative",
         background: "linear-gradient(135deg, #111 0%, #1a1a1a 100%)",
         borderRadius: "20px",
-        padding: "20px",
+        padding: "16px",
         border: "1px solid rgba(255,255,255,0.1)",
         boxShadow: "0 25px 50px -12px rgba(0,0,0,0.5)",
       }}>
-        {/* Week header */}
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(5, 1fr)",
-          gap: "8px",
-          marginBottom: "12px",
-        }}>
-          {days.map((day, index) => (
-            <div key={day} style={{
-              textAlign: "center",
-              padding: "8px 4px",
-              borderRadius: "8px",
-              background: index === 1 ? "rgba(59,130,246,0.15)" : "transparent",
-            }}>
-              <div style={{
-                fontSize: "11px",
-                fontWeight: 600,
-                color: index === 1 ? "#60a5fa" : "#666",
-                letterSpacing: "0.5px",
-              }}>
-                {day}
-              </div>
-              <div style={{
-                fontSize: "18px",
-                fontWeight: 600,
-                color: index === 1 ? "#fff" : "#888",
-                marginTop: "2px",
-              }}>
-                {23 + index}
-              </div>
-            </div>
-          ))}
-        </div>
+        {/* Days list - vertical */}
+        <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
 
-        {/* Tasks grid */}
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(5, 1fr)",
-          gap: "8px",
-          minHeight: "180px",
-        }}>
-          {/* Monday */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+          {/* Monday - completed task */}
+          <div style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "12px",
+            padding: "10px 12px",
+            borderRadius: "10px",
+            background: "rgba(255,255,255,0.02)",
+          }}>
             <div style={{
-              padding: "8px",
-              background: "rgba(34,197,94,0.1)",
+              minWidth: "44px",
+              textAlign: "center",
+            }}>
+              <div style={{ fontSize: "10px", color: "#666", fontWeight: 600 }}>{days[0].short}</div>
+              <div style={{ fontSize: "16px", color: "#888", fontWeight: 600 }}>{days[0].num}</div>
+            </div>
+            <div style={{
+              flex: 1,
+              padding: "8px 12px",
+              background: "rgba(34,197,94,0.08)",
               borderRadius: "8px",
               borderLeft: "3px solid #22c55e",
             }}>
-              <div style={{ fontSize: "11px", color: "#888", textDecoration: "line-through" }}>Emails</div>
+              <div style={{ fontSize: "13px", color: "#666", textDecoration: "line-through" }}>
+                {lang === "es" ? "Revisar emails" : "Review emails"}
+              </div>
             </div>
           </div>
 
-          {/* Tuesday - active day */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+          {/* Tuesday - active day with tasks */}
+          <div style={{
+            display: "flex",
+            alignItems: "flex-start",
+            gap: "12px",
+            padding: "10px 12px",
+            borderRadius: "10px",
+            background: "rgba(59,130,246,0.08)",
+            border: "1px solid rgba(59,130,246,0.2)",
+          }}>
             <div style={{
-              padding: "8px",
-              background: "rgba(59,130,246,0.15)",
-              borderRadius: "8px",
-              borderLeft: "3px solid #3b82f6",
+              minWidth: "44px",
+              textAlign: "center",
             }}>
-              <div style={{ fontSize: "11px", color: "#fff" }}>Design review</div>
+              <div style={{ fontSize: "10px", color: "#60a5fa", fontWeight: 600 }}>{days[1].short}</div>
+              <div style={{ fontSize: "16px", color: "#fff", fontWeight: 600 }}>{days[1].num}</div>
             </div>
-            <div style={{
-              padding: "8px",
-              background: "rgba(168,85,247,0.1)",
-              borderRadius: "8px",
-              borderLeft: "3px solid #a855f7",
-            }}>
-              <div style={{ fontSize: "11px", color: "#c4b5fd" }}>Team call</div>
+            <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: "6px" }}>
+              <div style={{
+                padding: "8px 12px",
+                background: "rgba(59,130,246,0.15)",
+                borderRadius: "8px",
+                borderLeft: "3px solid #3b82f6",
+              }}>
+                <div style={{ fontSize: "13px", color: "#fff" }}>
+                  {lang === "es" ? "Diseño review" : "Design review"}
+                </div>
+              </div>
+              <div style={{
+                padding: "8px 12px",
+                background: "rgba(168,85,247,0.1)",
+                borderRadius: "8px",
+                borderLeft: "3px solid #a855f7",
+              }}>
+                <div style={{ fontSize: "13px", color: "#c4b5fd" }}>
+                  {lang === "es" ? "Llamada equipo" : "Team call"}
+                </div>
+              </div>
             </div>
           </div>
 
           {/* Wednesday */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+          <div style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "12px",
+            padding: "10px 12px",
+            borderRadius: "10px",
+            background: "rgba(255,255,255,0.02)",
+          }}>
             <div style={{
-              padding: "8px",
-              background: "rgba(251,191,36,0.1)",
+              minWidth: "44px",
+              textAlign: "center",
+            }}>
+              <div style={{ fontSize: "10px", color: "#666", fontWeight: 600 }}>{days[2].short}</div>
+              <div style={{ fontSize: "16px", color: "#888", fontWeight: 600 }}>{days[2].num}</div>
+            </div>
+            <div style={{
+              flex: 1,
+              padding: "8px 12px",
+              background: "rgba(251,191,36,0.08)",
               borderRadius: "8px",
               borderLeft: "3px solid #fbbf24",
             }}>
-              <div style={{ fontSize: "11px", color: "#fcd34d" }}>Report</div>
+              <div style={{ fontSize: "13px", color: "#fcd34d" }}>
+                {lang === "es" ? "Enviar reporte" : "Send report"}
+              </div>
             </div>
           </div>
 
-          {/* Thursday - drop zone highlight */}
+          {/* Thursday - drop zone */}
           <div style={{
             display: "flex",
-            flexDirection: "column",
-            gap: "6px",
-            position: "relative",
+            alignItems: "center",
+            gap: "12px",
+            padding: "10px 12px",
+            borderRadius: "10px",
+            background: "rgba(255,255,255,0.02)",
           }}>
-            {/* Drop zone indicator */}
             <div style={{
-              padding: "8px",
+              minWidth: "44px",
+              textAlign: "center",
+            }}>
+              <div style={{ fontSize: "10px", color: "#666", fontWeight: 600 }}>{days[3].short}</div>
+              <div style={{ fontSize: "16px", color: "#888", fontWeight: 600 }}>{days[3].num}</div>
+            </div>
+            <div style={{
+              flex: 1,
+              padding: "10px 12px",
               background: "rgba(59,130,246,0.05)",
               borderRadius: "8px",
               border: "2px dashed rgba(59,130,246,0.3)",
-              minHeight: "36px",
+              minHeight: "38px",
             }} />
           </div>
 
           {/* Friday */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+          <div style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "12px",
+            padding: "10px 12px",
+            borderRadius: "10px",
+            background: "rgba(255,255,255,0.02)",
+          }}>
             <div style={{
-              padding: "8px",
-              background: "rgba(236,72,153,0.1)",
+              minWidth: "44px",
+              textAlign: "center",
+            }}>
+              <div style={{ fontSize: "10px", color: "#666", fontWeight: 600 }}>{days[4].short}</div>
+              <div style={{ fontSize: "16px", color: "#888", fontWeight: 600 }}>{days[4].num}</div>
+            </div>
+            <div style={{
+              flex: 1,
+              padding: "8px 12px",
+              background: "rgba(236,72,153,0.08)",
               borderRadius: "8px",
               borderLeft: "3px solid #ec4899",
             }}>
-              <div style={{ fontSize: "11px", color: "#f472b6" }}>Launch</div>
+              <div style={{ fontSize: "13px", color: "#f472b6" }}>
+                {lang === "es" ? "Lanzamiento" : "Launch"}
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Floating drag indicator */}
+      {/* Floating drag indicator - now on the right pointing down */}
       <div style={{
         position: "absolute",
-        top: "45%",
-        right: "-25px",
-        transform: "translateY(-50%)",
+        top: "35%",
+        right: "-50px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        gap: "8px",
+        gap: "4px",
       }}>
         {/* Dragging task card */}
         <div style={{
-          padding: "10px 14px",
+          padding: "8px 12px",
           background: "linear-gradient(135deg, #3b82f6, #2563eb)",
-          borderRadius: "10px",
+          borderRadius: "8px",
           boxShadow: "0 10px 30px rgba(59,130,246,0.4), 0 0 0 2px rgba(255,255,255,0.1)",
-          transform: "rotate(3deg)",
+          transform: "rotate(2deg)",
         }}>
-          <div style={{ fontSize: "12px", color: "#fff", fontWeight: 500 }}>Presentation</div>
+          <div style={{ fontSize: "11px", color: "#fff", fontWeight: 500, whiteSpace: "nowrap" }}>
+            {lang === "es" ? "Presentación" : "Presentation"}
+          </div>
         </div>
 
-        {/* Curved arrow */}
-        <svg width="60" height="40" viewBox="0 0 60 40" fill="none" style={{ marginLeft: "-20px" }}>
+        {/* Vertical arrow pointing down */}
+        <svg width="24" height="50" viewBox="0 0 24 50" fill="none">
           <path
-            d="M50 5 C 30 5, 20 20, 10 35"
+            d="M12 0 L12 40"
             stroke="rgba(59,130,246,0.5)"
             strokeWidth="2"
             strokeDasharray="4 4"
@@ -324,7 +380,7 @@ function HeroVisual({ lang }: { lang: "en" | "es" }) {
             strokeLinecap="round"
           />
           <path
-            d="M15 30 L10 35 L5 28"
+            d="M6 35 L12 45 L18 35"
             stroke="rgba(59,130,246,0.5)"
             strokeWidth="2"
             fill="none"
@@ -337,7 +393,7 @@ function HeroVisual({ lang }: { lang: "en" | "es" }) {
       {/* Drag hint badge */}
       <div style={{
         position: "absolute",
-        bottom: "-15px",
+        bottom: "-20px",
         left: "50%",
         transform: "translateX(-50%)",
         padding: "8px 16px",
@@ -351,8 +407,7 @@ function HeroVisual({ lang }: { lang: "en" | "es" }) {
         whiteSpace: "nowrap",
       }}>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" strokeWidth="2">
-          <path d="M5 9l4 4-4 4" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M12 9l4 4-4 4" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M12 5v14M5 12l7 7 7-7" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
         <span style={{ fontSize: "12px", color: "#888" }}>{dragText}</span>
       </div>
