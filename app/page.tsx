@@ -13,78 +13,82 @@ const translations = {
     hero: {
       title: "Your tasks,",
       titleHighlight: "simplified.",
-      subtitle: "The task manager that helps you focus on what matters. Organize projects, plan your week, and get things done.",
+      subtitle: "The all-in-one task manager with rich notes, AI voice transcription, and smart recurring tasks. Organize your life effortlessly.",
       cta: "Get Started Free",
       noCreditCard: "No credit card required",
       signIn: "Already have an account?",
     },
     features: {
       title: "Everything you need",
-      subtitle: "Simple but powerful tools to keep you organized",
+      subtitle: "Powerful features that make productivity feel effortless",
       list: [
         {
           title: "Weekly View",
-          description: "See your entire week at a glance. Drag tasks between days easily.",
+          description: "See your entire week at a glance. Drag tasks between days and customize day order to match your workflow.",
           icon: "calendar",
         },
         {
-          title: "Projects",
-          description: "Group related tasks into projects with deadlines, labels, and visual progress.",
+          title: "Projects & Sections",
+          description: "Organize tasks into projects with custom sections, progress tracking, deadlines, and colored labels.",
           icon: "folder",
         },
         {
-          title: "Scheduled Tasks",
-          description: "Schedule tasks for future dates. They appear automatically in your week.",
-          icon: "clock",
+          title: "Rich Notes",
+          description: "Create beautiful notes with formatting, tables, links, and AI-powered voice-to-text transcription.",
+          icon: "notes",
         },
         {
-          title: "Recurring Tasks",
-          description: "Create monthly tasks using natural language. 'Pay rent on the 5th with 3 days notice'.",
+          title: "Smart Recurring Tasks",
+          description: "Daily, weekly, monthly, or custom intervals. Business day support and advance notices included.",
           icon: "repeat",
         },
         {
-          title: "History",
-          description: "Complete log of finished tasks. Search, filter, and restore when needed.",
+          title: "Complete History",
+          description: "Full log of completed tasks. Search by date, project, or text. One-click restore anytime.",
           icon: "history",
         },
         {
-          title: "Favorites",
-          description: "Mark projects as favorites for quick access from the sidebar.",
-          icon: "star",
+          title: "Quick Search",
+          description: "Find anything instantly with global search. Cmd+K to search notes, projects, and tasks.",
+          icon: "search",
         },
       ],
     },
     moreFeatures: {
       title: "And much more...",
       list: [
+        { title: "Voice Notes", description: "AI transcription to bullets", icon: "mic" },
+        { title: "Custom Days", description: "Reorder your week", icon: "calendar" },
+        { title: "Onboarding", description: "Interactive guided tour", icon: "guide" },
         { title: "Labels", description: "Custom color tags", icon: "tag" },
-        { title: "Sections", description: "Organize by sections", icon: "sections" },
-        { title: "PWA", description: "Install on your phone", icon: "phone" },
+        { title: "PWA Ready", description: "Install on any device", icon: "phone" },
         { title: "Multilingual", description: "Spanish & English", icon: "language" },
-        { title: "Urgent", description: "Special urgent section", icon: "urgent" },
-        { title: "Drag & Drop", description: "Reorganize by dragging", icon: "drag" },
+        { title: "Urgent Section", description: "Priority tasks always visible", icon: "urgent" },
+        { title: "Drag & Drop", description: "Reorganize everything", icon: "drag" },
         { title: "Duplicate", description: "Clone projects & tasks", icon: "duplicate" },
-        { title: "Archive", description: "Archive finished projects", icon: "archive" },
+        { title: "Archive", description: "Keep workspace clean", icon: "archive" },
+        { title: "Favorites", description: "Quick access sidebar", icon: "star" },
+        { title: "Undo Actions", description: "Restore with one click", icon: "undo" },
       ],
     },
     howItWorks: {
       title: "Simple to use",
-      subtitle: "Start in seconds. No complicated setup.",
+      subtitle: "Start in seconds. Interactive onboarding guides you through every feature.",
       steps: [
         {
           number: "1",
           title: "Create your account",
-          description: "Sign up free with email or Google. No credit card needed.",
+          description: "Sign up free with email or Google. Interactive tour shows you the ropes.",
         },
         {
           number: "2",
-          title: "Add your tasks",
-          description: "Write your tasks and assign them to days. Drag to reorganize.",
+          title: "Organize your way",
+          description: "Use weekly view for quick tasks, projects for big goals, and notes for ideas.",
         },
         {
           number: "3",
-          title: "Complete and progress",
-          description: "Mark tasks as done and watch your progress. Productivity made easy.",
+          title: "Stay on track",
+          description: "Recurring tasks, reminders, and history keep you productive every day.",
         },
       ],
     },
@@ -108,78 +112,82 @@ const translations = {
     hero: {
       title: "Tus tareas,",
       titleHighlight: "simplificadas.",
-      subtitle: "El gestor de tareas que te ayuda a enfocarte en lo importante. Organiza proyectos, planifica tu semana y logra tus metas.",
+      subtitle: "El gestor todo-en-uno con notas enriquecidas, transcripcion de voz con IA, y tareas recurrentes inteligentes. Organiza tu vida sin esfuerzo.",
       cta: "Comenzar Gratis",
       noCreditCard: "Sin tarjeta de credito",
       signIn: "¿Ya tenes cuenta?",
     },
     features: {
       title: "Todo lo que necesitas",
-      subtitle: "Herramientas simples pero poderosas para mantenerte organizado",
+      subtitle: "Funciones poderosas que hacen la productividad facil",
       list: [
         {
           title: "Vista Semanal",
-          description: "Ve toda tu semana de un vistazo. Arrastra tareas entre dias facilmente.",
+          description: "Ve toda tu semana de un vistazo. Arrastra tareas y personaliza el orden de los dias.",
           icon: "calendar",
         },
         {
-          title: "Proyectos",
-          description: "Agrupa tareas en proyectos con deadlines, labels y progreso visual.",
+          title: "Proyectos y Secciones",
+          description: "Organiza tareas en proyectos con secciones, progreso, deadlines y etiquetas de colores.",
           icon: "folder",
         },
         {
-          title: "Tareas Programadas",
-          description: "Programa tareas para fechas futuras. Aparecen automaticamente en tu semana.",
-          icon: "clock",
+          title: "Notas Enriquecidas",
+          description: "Crea notas con formato, tablas, links, y transcripcion de voz a texto con IA.",
+          icon: "notes",
         },
         {
           title: "Tareas Recurrentes",
-          description: "Crea tareas mensuales con lenguaje natural. 'Pagar alquiler el 5 con 3 dias de anticipacion'.",
+          description: "Diarias, semanales, mensuales o intervalos personalizados. Soporte para dias habiles y avisos anticipados.",
           icon: "repeat",
         },
         {
-          title: "Historial",
-          description: "Registro completo de tareas completadas. Busca, filtra y restaura cuando necesites.",
+          title: "Historial Completo",
+          description: "Registro de tareas completadas. Busca por fecha, proyecto o texto. Restaura con un click.",
           icon: "history",
         },
         {
-          title: "Favoritos",
-          description: "Marca proyectos como favoritos para acceso rapido desde la barra lateral.",
-          icon: "star",
+          title: "Busqueda Rapida",
+          description: "Encuentra todo al instante con busqueda global. Cmd+K para buscar notas, proyectos y tareas.",
+          icon: "search",
         },
       ],
     },
     moreFeatures: {
       title: "Y mucho mas...",
       list: [
+        { title: "Notas de Voz", description: "Transcripcion IA a bullets", icon: "mic" },
+        { title: "Dias Custom", description: "Reordena tu semana", icon: "calendar" },
+        { title: "Onboarding", description: "Tour interactivo guiado", icon: "guide" },
         { title: "Labels", description: "Etiquetas con colores", icon: "tag" },
-        { title: "Secciones", description: "Organiza por secciones", icon: "sections" },
-        { title: "PWA", description: "Instala en tu celular", icon: "phone" },
+        { title: "PWA Ready", description: "Instala en cualquier dispositivo", icon: "phone" },
         { title: "Multiidioma", description: "Espanol e Ingles", icon: "language" },
-        { title: "Urgentes", description: "Seccion especial urgencias", icon: "urgent" },
-        { title: "Drag & Drop", description: "Reorganiza arrastrando", icon: "drag" },
+        { title: "Urgentes", description: "Tareas prioritarias siempre visibles", icon: "urgent" },
+        { title: "Drag & Drop", description: "Reorganiza todo", icon: "drag" },
         { title: "Duplicar", description: "Clona proyectos y tareas", icon: "duplicate" },
-        { title: "Archivar", description: "Archiva proyectos terminados", icon: "archive" },
+        { title: "Archivar", description: "Manten el espacio limpio", icon: "archive" },
+        { title: "Favoritos", description: "Acceso rapido en sidebar", icon: "star" },
+        { title: "Deshacer", description: "Restaura con un click", icon: "undo" },
       ],
     },
     howItWorks: {
       title: "Simple de usar",
-      subtitle: "Empieza en segundos. Sin configuracion complicada.",
+      subtitle: "Empieza en segundos. El onboarding interactivo te guia por cada funcion.",
       steps: [
         {
           number: "1",
           title: "Crea tu cuenta",
-          description: "Registrate gratis con email o Google. Sin tarjeta de credito.",
+          description: "Registrate gratis con email o Google. El tour interactivo te muestra todo.",
         },
         {
           number: "2",
-          title: "Agrega tus tareas",
-          description: "Escribe tus tareas y asignalas a los dias. Arrastra para reorganizar.",
+          title: "Organiza a tu manera",
+          description: "Usa la vista semanal para tareas rapidas, proyectos para metas grandes, y notas para ideas.",
         },
         {
           number: "3",
-          title: "Completa y avanza",
-          description: "Marca tareas completadas y observa tu progreso. Productividad sin esfuerzo.",
+          title: "Mantente al dia",
+          description: "Tareas recurrentes, recordatorios e historial te mantienen productivo todos los dias.",
         },
       ],
     },
@@ -406,6 +414,21 @@ function FeatureIcon({ name }: { name: string }) {
         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
       </svg>
     ),
+    notes: (
+      <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+        <polyline points="14 2 14 8 20 8"></polyline>
+        <line x1="16" y1="13" x2="8" y2="13"></line>
+        <line x1="16" y1="17" x2="8" y2="17"></line>
+        <polyline points="10 9 9 9 8 9"></polyline>
+      </svg>
+    ),
+    search: (
+      <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    ),
   };
 
   return (
@@ -482,6 +505,40 @@ function SmallIcon({ name }: { name: string }) {
         <polyline points="21 8 21 21 3 21 3 8"></polyline>
         <rect x="1" y="3" width="22" height="5"></rect>
         <line x1="10" y1="12" x2="14" y2="12"></line>
+      </svg>
+    ),
+    mic: (
+      <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+        <line x1="12" y1="19" x2="12" y2="23"></line>
+        <line x1="8" y1="23" x2="16" y2="23"></line>
+      </svg>
+    ),
+    calendar: (
+      <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+      </svg>
+    ),
+    guide: (
+      <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+      </svg>
+    ),
+    star: (
+      <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+      </svg>
+    ),
+    undo: (
+      <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="1 4 1 10 7 10"></polyline>
+        <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
       </svg>
     ),
   };
@@ -631,6 +688,83 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* AI Notes Highlight Section */}
+      <section className="ai-highlight-section">
+        <div className="section-container">
+          <div className="ai-highlight-content">
+            <div className="ai-highlight-text">
+              <div className="ai-badge">
+                <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" strokeLinecap="round" strokeLinejoin="round"></path>
+                  <path d="M19 10v2a7 7 0 0 1-14 0v-2" strokeLinecap="round" strokeLinejoin="round"></path>
+                </svg>
+                <span>{lang === "es" ? "Potenciado por IA" : "AI Powered"}</span>
+              </div>
+              <h2>{lang === "es" ? "Notas de voz a texto en segundos" : "Voice to text notes in seconds"}</h2>
+              <p>
+                {lang === "es"
+                  ? "Graba tus ideas con voz y la IA las convierte automaticamente en bullets organizados. Perfecto para brainstorming, reuniones, o cuando no podes escribir."
+                  : "Record your ideas with voice and AI automatically converts them into organized bullet points. Perfect for brainstorming, meetings, or when you can't type."
+                }
+              </p>
+              <div className="ai-features-list">
+                <div className="ai-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="#a855f7">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                  </svg>
+                  <span>{lang === "es" ? "Transcripcion instantanea" : "Instant transcription"}</span>
+                </div>
+                <div className="ai-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="#a855f7">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                  </svg>
+                  <span>{lang === "es" ? "Bullets automaticos" : "Auto bullet points"}</span>
+                </div>
+                <div className="ai-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="#a855f7">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                  </svg>
+                  <span>{lang === "es" ? "Editor de texto enriquecido" : "Rich text editor"}</span>
+                </div>
+              </div>
+            </div>
+            <div className="ai-highlight-visual">
+              <div className="ai-visual-card">
+                <div className="ai-visual-header">
+                  <div className="ai-visual-dot"></div>
+                  <span>{lang === "es" ? "Mi nota" : "My note"}</span>
+                </div>
+                <div className="ai-visual-content">
+                  <div className="ai-visual-bullet">
+                    <span className="bullet-dot"></span>
+                    <span>{lang === "es" ? "Revisar propuesta del cliente" : "Review client proposal"}</span>
+                  </div>
+                  <div className="ai-visual-bullet">
+                    <span className="bullet-dot"></span>
+                    <span>{lang === "es" ? "Actualizar documentacion" : "Update documentation"}</span>
+                  </div>
+                  <div className="ai-visual-bullet">
+                    <span className="bullet-dot"></span>
+                    <span>{lang === "es" ? "Llamar al equipo de ventas" : "Call sales team"}</span>
+                  </div>
+                </div>
+                <div className="ai-visual-recording">
+                  <div className="recording-icon">
+                    <svg width="16" height="16" fill="none" stroke="#a855f7" strokeWidth="2">
+                      <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                    </svg>
+                  </div>
+                  <div className="recording-waves">
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                  <span className="recording-text">{lang === "es" ? "Grabando..." : "Recording..."}</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1211,6 +1345,173 @@ export default function Home() {
           line-height: 1.5;
         }
 
+        /* AI Highlight Section */
+        .ai-highlight-section {
+          padding: 80px 0;
+          background: linear-gradient(180deg, #080808 0%, #0a0a0a 100%);
+        }
+
+        .ai-highlight-content {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 60px;
+          align-items: center;
+        }
+
+        .ai-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 8px 14px;
+          background: rgba(168,85,247,0.1);
+          border: 1px solid rgba(168,85,247,0.2);
+          border-radius: 20px;
+          color: #a855f7;
+          font-size: 13px;
+          font-weight: 500;
+          margin-bottom: 20px;
+        }
+
+        .ai-highlight-text h2 {
+          font-size: clamp(28px, 4vw, 36px);
+          font-weight: 700;
+          margin-bottom: 16px;
+          line-height: 1.2;
+        }
+
+        .ai-highlight-text p {
+          font-size: 16px;
+          color: #888;
+          line-height: 1.7;
+          margin-bottom: 24px;
+        }
+
+        .ai-features-list {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .ai-feature-item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-size: 14px;
+          color: #ccc;
+        }
+
+        .ai-highlight-visual {
+          display: flex;
+          justify-content: center;
+        }
+
+        .ai-visual-card {
+          background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+          border-radius: 16px;
+          padding: 20px;
+          border: 1px solid rgba(255,255,255,0.1);
+          box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+          width: 100%;
+          max-width: 340px;
+        }
+
+        .ai-visual-header {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 16px;
+          padding-bottom: 12px;
+          border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .ai-visual-dot {
+          width: 10px;
+          height: 10px;
+          background: #a855f7;
+          border-radius: 3px;
+        }
+
+        .ai-visual-header span {
+          font-size: 14px;
+          font-weight: 500;
+          color: #fff;
+        }
+
+        .ai-visual-content {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin-bottom: 16px;
+        }
+
+        .ai-visual-bullet {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-size: 13px;
+          color: #ccc;
+        }
+
+        .bullet-dot {
+          width: 6px;
+          height: 6px;
+          background: #a855f7;
+          border-radius: 50%;
+          flex-shrink: 0;
+        }
+
+        .ai-visual-recording {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 12px;
+          background: rgba(168,85,247,0.08);
+          border-radius: 10px;
+          border: 1px solid rgba(168,85,247,0.2);
+        }
+
+        .recording-icon {
+          width: 32px;
+          height: 32px;
+          background: rgba(168,85,247,0.15);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .recording-waves {
+          display: flex;
+          align-items: center;
+          gap: 3px;
+          flex: 1;
+        }
+
+        .recording-waves span {
+          width: 3px;
+          height: 12px;
+          background: #a855f7;
+          border-radius: 2px;
+          animation: wave 1s ease-in-out infinite;
+        }
+
+        .recording-waves span:nth-child(1) { animation-delay: 0s; height: 8px; }
+        .recording-waves span:nth-child(2) { animation-delay: 0.1s; height: 16px; }
+        .recording-waves span:nth-child(3) { animation-delay: 0.2s; height: 12px; }
+        .recording-waves span:nth-child(4) { animation-delay: 0.3s; height: 18px; }
+        .recording-waves span:nth-child(5) { animation-delay: 0.4s; height: 10px; }
+
+        @keyframes wave {
+          0%, 100% { transform: scaleY(1); }
+          50% { transform: scaleY(0.5); }
+        }
+
+        .recording-text {
+          font-size: 12px;
+          color: #a855f7;
+          font-weight: 500;
+        }
+
         /* How it works */
         .how-section {
           padding: 80px 0;
@@ -1262,7 +1563,7 @@ export default function Home() {
         .more-features-grid {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
-          gap: 16px;
+          gap: 14px;
         }
 
         .small-feature-card {
@@ -1425,7 +1726,25 @@ export default function Home() {
           }
 
           .more-features-grid {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+          }
+
+          .ai-highlight-content {
+            grid-template-columns: 1fr;
+            gap: 40px;
+            text-align: center;
+          }
+
+          .ai-highlight-text {
+            order: 1;
+          }
+
+          .ai-highlight-visual {
+            order: 2;
+          }
+
+          .ai-features-list {
+            align-items: center;
           }
         }
 
