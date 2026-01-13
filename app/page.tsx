@@ -13,7 +13,7 @@ const translations = {
     hero: {
       title: "Your tasks,",
       titleHighlight: "simplified.",
-      subtitle: "The all-in-one task manager with rich notes, AI voice transcription, and smart recurring tasks. Organize your life effortlessly.",
+      subtitle: "Weekly view, rich notes, AI voice transcription, and smart recurring tasks. Share reminders with family and team. All in one place.",
       cta: "Get Started Free",
       noCreditCard: "No credit card required",
       signIn: "Already have an account?",
@@ -54,21 +54,27 @@ const translations = {
         },
       ],
     },
+    sharing: {
+      badge: "New",
+      title: "Share reminders with your people",
+      subtitle: "Create shared lists with your family, roommates, or team. Everyone stays synced in real time.",
+      features: [
+        "Real-time sync",
+        "Instant notifications",
+        "See who completed what"
+      ],
+      example1: { title: "Home", user1: "You", user2: "Partner" },
+      task1: "Pay rent on the 5th",
+      task2: "Take car to mechanic",
+      task3: "Call insurance",
+    },
     moreFeatures: {
       title: "And much more...",
       list: [
         { title: "Voice Notes", description: "AI transcription to bullets", icon: "mic" },
-        { title: "Custom Days", description: "Reorder your week", icon: "calendar" },
-        { title: "Onboarding", description: "Interactive guided tour", icon: "guide" },
-        { title: "Labels", description: "Custom color tags", icon: "tag" },
-        { title: "PWA Ready", description: "Install on any device", icon: "phone" },
-        { title: "Multilingual", description: "Spanish & English", icon: "language" },
-        { title: "Urgent Section", description: "Priority tasks always visible", icon: "urgent" },
         { title: "Drag & Drop", description: "Reorganize everything", icon: "drag" },
-        { title: "Duplicate", description: "Clone projects & tasks", icon: "duplicate" },
-        { title: "Archive", description: "Keep workspace clean", icon: "archive" },
-        { title: "Favorites", description: "Quick access sidebar", icon: "star" },
-        { title: "Undo Actions", description: "Restore with one click", icon: "undo" },
+        { title: "PWA Ready", description: "Install on any device", icon: "phone" },
+        { title: "Full History", description: "Search and restore tasks", icon: "history" },
       ],
     },
     howItWorks: {
@@ -112,7 +118,7 @@ const translations = {
     hero: {
       title: "Tus tareas,",
       titleHighlight: "simplificadas.",
-      subtitle: "El gestor todo-en-uno con notas enriquecidas, transcripcion de voz con IA, y tareas recurrentes inteligentes. Organiza tu vida sin esfuerzo.",
+      subtitle: "Vista semanal, notas enriquecidas, transcripcion de voz con IA, y tareas recurrentes. Comparte recordatorios con familia y equipo. Todo en un lugar.",
       cta: "Comenzar Gratis",
       noCreditCard: "Sin tarjeta de credito",
       signIn: "¿Ya tenes cuenta?",
@@ -153,21 +159,27 @@ const translations = {
         },
       ],
     },
+    sharing: {
+      badge: "Nuevo",
+      title: "Comparte recordatorios con los tuyos",
+      subtitle: "Crea listas compartidas con tu familia, companeros de casa o equipo. Todos sincronizados en tiempo real.",
+      features: [
+        "Sincronizacion en tiempo real",
+        "Notificaciones instantaneas",
+        "Ve quien completo cada tarea"
+      ],
+      example1: { title: "Casa", user1: "Vos", user2: "Pareja" },
+      task1: "Pagar alquiler el dia 5",
+      task2: "Llevar auto al taller",
+      task3: "Llamar al seguro",
+    },
     moreFeatures: {
       title: "Y mucho mas...",
       list: [
         { title: "Notas de Voz", description: "Transcripcion IA a bullets", icon: "mic" },
-        { title: "Dias Custom", description: "Reordena tu semana", icon: "calendar" },
-        { title: "Onboarding", description: "Tour interactivo guiado", icon: "guide" },
-        { title: "Labels", description: "Etiquetas con colores", icon: "tag" },
-        { title: "PWA Ready", description: "Instala en cualquier dispositivo", icon: "phone" },
-        { title: "Multiidioma", description: "Espanol e Ingles", icon: "language" },
-        { title: "Urgentes", description: "Tareas prioritarias siempre visibles", icon: "urgent" },
         { title: "Drag & Drop", description: "Reorganiza todo", icon: "drag" },
-        { title: "Duplicar", description: "Clona proyectos y tareas", icon: "duplicate" },
-        { title: "Archivar", description: "Manten el espacio limpio", icon: "archive" },
-        { title: "Favoritos", description: "Acceso rapido en sidebar", icon: "star" },
-        { title: "Deshacer", description: "Restaura con un click", icon: "undo" },
+        { title: "PWA Ready", description: "Instala en cualquier dispositivo", icon: "phone" },
+        { title: "Historial", description: "Busca y restaura tareas", icon: "history" },
       ],
     },
     howItWorks: {
@@ -541,6 +553,13 @@ function SmallIcon({ name }: { name: string }) {
         <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
       </svg>
     ),
+    history: (
+      <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M3 3v5h5"></path>
+        <path d="M3.05 13A9 9 0 1 0 6 5.3L3 8"></path>
+        <path d="M12 7v5l4 2"></path>
+      </svg>
+    ),
   };
 
   return <>{icons[name]}</>;
@@ -763,6 +782,76 @@ export default function Home() {
                   </div>
                   <span className="recording-text">{lang === "es" ? "Grabando..." : "Recording..."}</span>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sharing Section */}
+      <section className="sharing-section">
+        <div className="section-container">
+          <div className="sharing-content">
+            <div className="sharing-visual">
+              <div className="sharing-card">
+                <div className="sharing-card-header">
+                  <div className="sharing-list-icon">
+                    <svg width="16" height="16" fill="none" stroke="#10b981" strokeWidth="2">
+                      <path d="M3 3h18v18H3z" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M9 9h6M9 13h6" strokeLinecap="round"/>
+                    </svg>
+                  </div>
+                  <span className="sharing-list-title">{t.sharing.example1.title}</span>
+                  <div className="sharing-users">
+                    <div className="sharing-avatar you">{t.sharing.example1.user1.charAt(0)}</div>
+                    <div className="sharing-avatar partner">{t.sharing.example1.user2.charAt(0)}</div>
+                  </div>
+                </div>
+                <div className="sharing-tasks">
+                  <div className="sharing-task">
+                    <div className="sharing-checkbox checked">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3">
+                        <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                    <span className="sharing-task-text done">{t.sharing.task1}</span>
+                    <span className="sharing-task-by">{t.sharing.example1.user2}</span>
+                  </div>
+                  <div className="sharing-task">
+                    <div className="sharing-checkbox"></div>
+                    <span className="sharing-task-text">{t.sharing.task2}</span>
+                  </div>
+                  <div className="sharing-task">
+                    <div className="sharing-checkbox"></div>
+                    <span className="sharing-task-text">{t.sharing.task3}</span>
+                  </div>
+                </div>
+                <div className="sharing-sync-indicator">
+                  <div className="sync-dot"></div>
+                  <span>{lang === "es" ? "Sincronizado" : "Synced"}</span>
+                </div>
+              </div>
+            </div>
+            <div className="sharing-text">
+              <div className="sharing-badge">
+                <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                <span>{t.sharing.badge}</span>
+              </div>
+              <h2>{t.sharing.title}</h2>
+              <p>{t.sharing.subtitle}</p>
+              <div className="sharing-features-list">
+                {t.sharing.features.map((feature, index) => (
+                  <div key={index} className="sharing-feature-item">
+                    <svg width="18" height="18" viewBox="0 0 20 20" fill="#10b981">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                    </svg>
+                    <span>{feature}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -1024,11 +1113,11 @@ export default function Home() {
         }
 
         .hero-subtitle {
-          font-size: 17px;
-          color: #888;
+          font-size: 18px;
+          color: #a0a0a0;
           margin-bottom: 28px;
-          line-height: 1.6;
-          max-width: 420px;
+          line-height: 1.7;
+          max-width: 440px;
         }
 
         .hero-cta-group {
@@ -1303,7 +1392,9 @@ export default function Home() {
 
         .section-header p {
           font-size: 17px;
-          color: #888;
+          color: #9a9a9a;
+          max-width: 600px;
+          margin: 0 auto;
         }
 
         /* Features Section */
@@ -1341,8 +1432,8 @@ export default function Home() {
 
         .feature-content p {
           font-size: 14px;
-          color: #777;
-          line-height: 1.5;
+          color: #888;
+          line-height: 1.6;
         }
 
         /* AI Highlight Section */
@@ -1510,6 +1601,219 @@ export default function Home() {
           font-size: 12px;
           color: #a855f7;
           font-weight: 500;
+        }
+
+        /* Sharing Section */
+        .sharing-section {
+          padding: 80px 0;
+          background: linear-gradient(180deg, #0a0a0a 0%, #080808 100%);
+        }
+
+        .sharing-content {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 60px;
+          align-items: center;
+        }
+
+        .sharing-visual {
+          display: flex;
+          justify-content: center;
+        }
+
+        .sharing-card {
+          background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+          border-radius: 16px;
+          padding: 20px;
+          border: 1px solid rgba(255,255,255,0.1);
+          box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+          width: 100%;
+          max-width: 320px;
+        }
+
+        .sharing-card-header {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 16px;
+          padding-bottom: 12px;
+          border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .sharing-list-icon {
+          width: 28px;
+          height: 28px;
+          background: rgba(16,185,129,0.15);
+          border-radius: 6px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .sharing-list-title {
+          font-size: 14px;
+          font-weight: 600;
+          color: #fff;
+          flex: 1;
+        }
+
+        .sharing-users {
+          display: flex;
+          align-items: center;
+        }
+
+        .sharing-avatar {
+          width: 26px;
+          height: 26px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 11px;
+          font-weight: 600;
+          margin-left: -6px;
+          border: 2px solid #1a1a1a;
+        }
+
+        .sharing-avatar:first-child {
+          margin-left: 0;
+        }
+
+        .sharing-avatar.you {
+          background: #3b82f6;
+          color: white;
+        }
+
+        .sharing-avatar.partner {
+          background: #10b981;
+          color: white;
+        }
+
+        .sharing-tasks {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          margin-bottom: 16px;
+        }
+
+        .sharing-task {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 10px 12px;
+          background: rgba(255,255,255,0.02);
+          border-radius: 8px;
+        }
+
+        .sharing-checkbox {
+          width: 16px;
+          height: 16px;
+          border: 2px solid #444;
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+        }
+
+        .sharing-checkbox.checked {
+          background: #10b981;
+          border-color: #10b981;
+        }
+
+        .sharing-task-text {
+          font-size: 13px;
+          color: #ddd;
+          flex: 1;
+        }
+
+        .sharing-task-text.done {
+          color: #666;
+          text-decoration: line-through;
+        }
+
+        .sharing-task-by {
+          font-size: 11px;
+          color: #10b981;
+          background: rgba(16,185,129,0.1);
+          padding: 2px 8px;
+          border-radius: 10px;
+        }
+
+        .sharing-sync-indicator {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          padding: 8px 12px;
+          background: rgba(16,185,129,0.08);
+          border-radius: 8px;
+          border: 1px solid rgba(16,185,129,0.15);
+        }
+
+        .sync-dot {
+          width: 8px;
+          height: 8px;
+          background: #10b981;
+          border-radius: 50%;
+          animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.5; }
+        }
+
+        .sharing-sync-indicator span {
+          font-size: 12px;
+          color: #10b981;
+        }
+
+        .sharing-text {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .sharing-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 8px 14px;
+          background: rgba(16,185,129,0.1);
+          border: 1px solid rgba(16,185,129,0.2);
+          border-radius: 20px;
+          color: #10b981;
+          font-size: 13px;
+          font-weight: 500;
+          margin-bottom: 20px;
+          width: fit-content;
+        }
+
+        .sharing-text h2 {
+          font-size: clamp(28px, 4vw, 36px);
+          font-weight: 700;
+          margin-bottom: 16px;
+          line-height: 1.2;
+        }
+
+        .sharing-text p {
+          font-size: 16px;
+          color: #888;
+          line-height: 1.7;
+          margin-bottom: 24px;
+        }
+
+        .sharing-features-list {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .sharing-feature-item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-size: 14px;
+          color: #ccc;
         }
 
         /* How it works */
@@ -1744,6 +2048,25 @@ export default function Home() {
           }
 
           .ai-features-list {
+            align-items: center;
+          }
+
+          .sharing-content {
+            grid-template-columns: 1fr;
+            gap: 40px;
+            text-align: center;
+          }
+
+          .sharing-visual {
+            order: 2;
+          }
+
+          .sharing-text {
+            order: 1;
+            align-items: center;
+          }
+
+          .sharing-features-list {
             align-items: center;
           }
         }
