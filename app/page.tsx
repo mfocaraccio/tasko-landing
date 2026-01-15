@@ -68,6 +68,28 @@ const translations = {
       task2: "Take car to mechanic",
       task3: "Call insurance",
     },
+    projects: {
+      badge: "Projects",
+      title: "Track progress with Kanban-style projects",
+      subtitle: "Organize big goals into sections. See your progress at a glance with visual tracking and deadlines.",
+      features: [
+        "Custom sections",
+        "Progress bar",
+        "Deadlines & labels"
+      ],
+      projectName: "Website Redesign",
+      sections: {
+        todo: "To Do",
+        inProgress: "In Progress",
+        done: "Done"
+      },
+      tasks: {
+        task1: "Research competitors",
+        task2: "Design mockups",
+        task3: "Review with team"
+      },
+      progress: "67%"
+    },
     moreFeatures: {
       title: "And much more...",
       list: [
@@ -172,6 +194,28 @@ const translations = {
       task1: "Pagar alquiler el dia 5",
       task2: "Llevar auto al taller",
       task3: "Llamar al seguro",
+    },
+    projects: {
+      badge: "Proyectos",
+      title: "Segui el progreso con proyectos tipo Kanban",
+      subtitle: "Organiza metas grandes en secciones. Ve tu avance de un vistazo con seguimiento visual y deadlines.",
+      features: [
+        "Secciones personalizadas",
+        "Barra de progreso",
+        "Deadlines y etiquetas"
+      ],
+      projectName: "Rediseno Web",
+      sections: {
+        todo: "Por Hacer",
+        inProgress: "En Progreso",
+        done: "Hecho"
+      },
+      tasks: {
+        task1: "Investigar competencia",
+        task2: "Disenar mockups",
+        task3: "Revisar con equipo"
+      },
+      progress: "67%"
     },
     moreFeatures: {
       title: "Y mucho mas...",
@@ -852,6 +896,90 @@ export default function Home() {
                     <span>{feature}</span>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Kanban Section */}
+      <section className="projects-section">
+        <div className="section-container">
+          <div className="projects-content">
+            <div className="projects-text">
+              <div className="projects-badge">
+                <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                  <path d="M3 9h18M9 21V9" strokeLinecap="round"/>
+                </svg>
+                <span>{t.projects.badge}</span>
+              </div>
+              <h2>{t.projects.title}</h2>
+              <p>{t.projects.subtitle}</p>
+              <div className="projects-features-list">
+                {t.projects.features.map((feature, index) => (
+                  <div key={index} className="projects-feature-item">
+                    <svg width="18" height="18" viewBox="0 0 20 20" fill="#f59e0b">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                    </svg>
+                    <span>{feature}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="projects-visual">
+              <div className="kanban-card">
+                <div className="kanban-header">
+                  <div className="kanban-project-icon">
+                    <svg width="14" height="14" fill="none" stroke="#f59e0b" strokeWidth="2">
+                      <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                    </svg>
+                  </div>
+                  <span className="kanban-project-name">{t.projects.projectName}</span>
+                  <div className="kanban-progress-badge">{t.projects.progress}</div>
+                </div>
+                <div className="kanban-progress-bar">
+                  <div className="kanban-progress-fill"></div>
+                </div>
+                <div className="kanban-columns">
+                  <div className="kanban-column">
+                    <div className="kanban-column-header todo">
+                      <span className="kanban-column-dot todo"></span>
+                      <span>{t.projects.sections.todo}</span>
+                      <span className="kanban-count">1</span>
+                    </div>
+                    <div className="kanban-task">
+                      <div className="kanban-task-checkbox"></div>
+                      <span>{t.projects.tasks.task1}</span>
+                    </div>
+                  </div>
+                  <div className="kanban-column">
+                    <div className="kanban-column-header progress">
+                      <span className="kanban-column-dot progress"></span>
+                      <span>{t.projects.sections.inProgress}</span>
+                      <span className="kanban-count">1</span>
+                    </div>
+                    <div className="kanban-task active">
+                      <div className="kanban-task-checkbox"></div>
+                      <span>{t.projects.tasks.task2}</span>
+                    </div>
+                  </div>
+                  <div className="kanban-column">
+                    <div className="kanban-column-header done">
+                      <span className="kanban-column-dot done"></span>
+                      <span>{t.projects.sections.done}</span>
+                      <span className="kanban-count">1</span>
+                    </div>
+                    <div className="kanban-task completed">
+                      <div className="kanban-task-checkbox checked">
+                        <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3">
+                          <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </div>
+                      <span>{t.projects.tasks.task3}</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1816,6 +1944,236 @@ export default function Home() {
           color: #ccc;
         }
 
+        /* Projects Kanban Section */
+        .projects-section {
+          padding: 80px 0;
+          background: #080808;
+        }
+
+        .projects-content {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 60px;
+          align-items: center;
+        }
+
+        .projects-text {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .projects-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 8px 14px;
+          background: rgba(245,158,11,0.1);
+          border: 1px solid rgba(245,158,11,0.2);
+          border-radius: 20px;
+          color: #f59e0b;
+          font-size: 13px;
+          font-weight: 500;
+          margin-bottom: 20px;
+          width: fit-content;
+        }
+
+        .projects-text h2 {
+          font-size: clamp(28px, 4vw, 36px);
+          font-weight: 700;
+          margin-bottom: 16px;
+          line-height: 1.2;
+        }
+
+        .projects-text p {
+          font-size: 16px;
+          color: #888;
+          line-height: 1.7;
+          margin-bottom: 24px;
+        }
+
+        .projects-features-list {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .projects-feature-item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-size: 14px;
+          color: #ccc;
+        }
+
+        .projects-visual {
+          display: flex;
+          justify-content: center;
+        }
+
+        .kanban-card {
+          background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+          border-radius: 16px;
+          padding: 20px;
+          border: 1px solid rgba(255,255,255,0.1);
+          box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+          width: 100%;
+          max-width: 380px;
+        }
+
+        .kanban-header {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 12px;
+        }
+
+        .kanban-project-icon {
+          width: 28px;
+          height: 28px;
+          background: rgba(245,158,11,0.15);
+          border-radius: 6px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .kanban-project-name {
+          font-size: 14px;
+          font-weight: 600;
+          color: #fff;
+          flex: 1;
+        }
+
+        .kanban-progress-badge {
+          font-size: 11px;
+          font-weight: 600;
+          color: #f59e0b;
+          background: rgba(245,158,11,0.1);
+          padding: 4px 10px;
+          border-radius: 10px;
+        }
+
+        .kanban-progress-bar {
+          height: 4px;
+          background: rgba(255,255,255,0.1);
+          border-radius: 2px;
+          margin-bottom: 16px;
+          overflow: hidden;
+        }
+
+        .kanban-progress-fill {
+          height: 100%;
+          width: 67%;
+          background: linear-gradient(90deg, #f59e0b, #fbbf24);
+          border-radius: 2px;
+        }
+
+        .kanban-columns {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 8px;
+        }
+
+        .kanban-column {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+        }
+
+        .kanban-column-header {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          padding: 6px 8px;
+          border-radius: 6px;
+          font-size: 10px;
+          font-weight: 600;
+          color: #888;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+
+        .kanban-column-header.todo {
+          background: rgba(107,114,128,0.1);
+        }
+
+        .kanban-column-header.progress {
+          background: rgba(59,130,246,0.1);
+        }
+
+        .kanban-column-header.done {
+          background: rgba(34,197,94,0.1);
+        }
+
+        .kanban-column-dot {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+        }
+
+        .kanban-column-dot.todo {
+          background: #6b7280;
+        }
+
+        .kanban-column-dot.progress {
+          background: #3b82f6;
+        }
+
+        .kanban-column-dot.done {
+          background: #22c55e;
+        }
+
+        .kanban-count {
+          margin-left: auto;
+          color: #555;
+        }
+
+        .kanban-task {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          padding: 8px;
+          background: rgba(255,255,255,0.02);
+          border-radius: 6px;
+          border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .kanban-task.active {
+          border-color: rgba(59,130,246,0.3);
+          background: rgba(59,130,246,0.05);
+        }
+
+        .kanban-task.completed {
+          opacity: 0.6;
+        }
+
+        .kanban-task span {
+          font-size: 11px;
+          color: #ccc;
+          line-height: 1.3;
+        }
+
+        .kanban-task.completed span {
+          text-decoration: line-through;
+          color: #666;
+        }
+
+        .kanban-task-checkbox {
+          width: 12px;
+          height: 12px;
+          border: 2px solid #444;
+          border-radius: 3px;
+          flex-shrink: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .kanban-task-checkbox.checked {
+          background: #22c55e;
+          border-color: #22c55e;
+        }
+
         /* How it works */
         .how-section {
           padding: 80px 0;
@@ -2068,6 +2426,25 @@ export default function Home() {
 
           .sharing-features-list {
             align-items: center;
+          }
+
+          .projects-content {
+            grid-template-columns: 1fr;
+            gap: 40px;
+            text-align: center;
+          }
+
+          .projects-text {
+            align-items: center;
+          }
+
+          .projects-features-list {
+            align-items: center;
+          }
+
+          .kanban-columns {
+            grid-template-columns: 1fr;
+            gap: 12px;
           }
         }
 
